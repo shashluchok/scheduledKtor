@@ -15,6 +15,10 @@ group 'com.scheduled'
 version '0.0.1'
 mainClassName = "io.ktor.server.netty.EngineMain"
 
+tasks.create("stage") {
+    dependsOn("installDist")
+}
+
 sourceSets {
     main.kotlin.srcDirs = main.java.srcDirs = ['src']
     test.kotlin.srcDirs = test.java.srcDirs = ['test']
@@ -51,4 +55,7 @@ dependencies {
 
     implementation "io.ktor:ktor-auth:$ktor_version"
     implementation "io.ktor:ktor-auth-jwt:$ktor_version"
+
+    //Locations
+    implementation "io.ktor:ktor-locations:$ktor_version"
 }

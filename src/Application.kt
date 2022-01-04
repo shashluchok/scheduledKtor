@@ -1,6 +1,5 @@
 package ru.skovoroda
 
-import com.sun.tools.javac.file.Locations
 import io.ktor.application.*
 import io.ktor.response.*
 import io.ktor.request.*
@@ -10,6 +9,7 @@ import io.ktor.sessions.*
 import io.ktor.auth.*
 import io.ktor.gson.*
 import io.ktor.features.*
+import io.ktor.locations.*
 import ru.skovoroda.authentication.JwtService
 import ru.skovoroda.authentication.hash
 import ru.skovoroda.repository.DatabaseFactory
