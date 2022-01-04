@@ -1,4 +1,4 @@
-package ru.skovoroda.data.model
+package com.scheduled.data.model
 
 data class User(
     val name:String,

@@ -1,4 +1,4 @@
-package ru.skovoroda.data.model.auth.responses
+package com.scheduled.data.model.auth.responses
 
 data class AuthResponse(
     val success:Boolean,

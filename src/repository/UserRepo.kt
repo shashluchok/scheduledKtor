@@ -1,10 +1,10 @@
-package ru.skovoroda.repository
+package com.scheduled.repository
 
 import org.jetbrains.exposed.sql.ResultRow
 import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.select
-import ru.skovoroda.data.model.User
-import ru.skovoroda.data.table.UserTable
+import com.scheduled.data.model.User
+import com.scheduled.data.table.UserTable
 
 class UserRepo {
 

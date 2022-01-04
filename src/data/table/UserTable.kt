@@ -1,4 +1,4 @@
-package ru.skovoroda.data.table
+package com.scheduled.data.table
 
 import org.jetbrains.exposed.sql.Table
 

@@ -1,4 +1,4 @@
-package ru.skovoroda.data.model.auth.requests
+package com.scheduled.data.model.auth.requests
 
 data class RegisterRequest (
         val name:String,

@@ -1,8 +1,8 @@
-package ru.skovoroda.data.table
+package com.scheduled.data.table
 
 import org.jetbrains.exposed.sql.Table
 
-object RecipeTable: Table() {
+object NoteTable: Table() {
     val id = varchar("id",512)
     val userEmail = varchar("userEmail", 512).references(UserTable.email)
     val title = text("title")

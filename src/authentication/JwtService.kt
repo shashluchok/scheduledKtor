@@ -1,9 +1,9 @@
-package ru.skovoroda.authentication
+package authentication
 
 import com.auth0.jwt.JWT
 import com.auth0.jwt.JWTVerifier
 import com.auth0.jwt.algorithms.Algorithm
-import ru.skovoroda.data.model.User
+import com.scheduled.data.model.User
 
 class JwtService {
 

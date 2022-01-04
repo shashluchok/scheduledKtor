@@ -1,4 +1,4 @@
-package ru.skovoroda.authentication
+package authentication
 
 import io.ktor.util.*
 import javax.crypto.Mac

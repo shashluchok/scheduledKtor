@@ -1,8 +1,7 @@
-package ru.skovoroda
+package com.scheduled
 
 import io.ktor.application.*
 import io.ktor.response.*
-import io.ktor.request.*
 import io.ktor.routing.*
 import io.ktor.http.*
 import io.ktor.sessions.*
@@ -10,16 +9,17 @@ import io.ktor.auth.*
 import io.ktor.gson.*
 import io.ktor.features.*
 import io.ktor.locations.*
-import ru.skovoroda.authentication.JwtService
-import ru.skovoroda.authentication.hash
-import ru.skovoroda.repository.DatabaseFactory
-import ru.skovoroda.repository.UserRepo
-import ru.skovoroda.routes.UserRoutes
+import authentication.JwtService
+import authentication.hash
+import com.scheduled.repository.DatabaseFactory
+import com.scheduled.repository.UserRepo
+import com.scheduled.routes.UserRoutes
+import io.ktor.server.netty.*
 
-fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
+fun main(args: Array<String>): Unit = EngineMain.main(args)
 
-@Suppress("unused") // Referenced in application.conf
-@kotlin.jvm.JvmOverloads
+@Suppress("unused")
+@JvmOverloads
 fun Application.module(testing: Boolean = false) {
 
     DatabaseFactory.init()

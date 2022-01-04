@@ -1,4 +1,4 @@
-package ru.skovoroda.routes
+package com.scheduled.routes
 
 import io.ktor.application.*
 import io.ktor.http.*
@@ -6,12 +6,12 @@ import io.ktor.locations.*
 import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.*
-import ru.skovoroda.authentication.JwtService
-import ru.skovoroda.data.model.User
-import ru.skovoroda.data.model.auth.requests.LoginRequest
-import ru.skovoroda.data.model.auth.requests.RegisterRequest
-import ru.skovoroda.data.model.auth.responses.AuthResponse
-import ru.skovoroda.repository.UserRepo
+import com.scheduled.data.model.User
+import com.scheduled.data.model.auth.requests.LoginRequest
+import com.scheduled.data.model.auth.requests.RegisterRequest
+import com.scheduled.data.model.auth.responses.AuthResponse
+import com.scheduled.repository.UserRepo
+import authentication.JwtService
 
 const val API_VERSION = "/v1"
 const val USERS = "$API_VERSION/users"

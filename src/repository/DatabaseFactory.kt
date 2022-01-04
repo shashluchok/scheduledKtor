@@ -1,4 +1,4 @@
-package ru.skovoroda.repository
+package com.scheduled.repository
 
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
@@ -7,8 +7,8 @@ import kotlinx.coroutines.withContext
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
-import ru.skovoroda.data.table.RecipeTable
-import ru.skovoroda.data.table.UserTable
+import com.scheduled.data.table.NoteTable
+import com.scheduled.data.table.UserTable
 import java.net.URI
 
 object DatabaseFactory {
@@ -16,7 +16,7 @@ object DatabaseFactory {
     fun init() {
         Database.connect(hikari())
         transaction { SchemaUtils.create(UserTable) }
-        transaction { SchemaUtils.create(RecipeTable) }
+        transaction { SchemaUtils.create(NoteTable) }
     }
 
     private fun hikari(): HikariDataSource {
